@@ -1,0 +1,11 @@
+{
+  "regions": ["hnd1"],
+  "functions": {
+    "api/**": {
+      "memory": 1024
+    }
+  },
+  "rewrites": [
+    { "source": "/(.+)", "destination": "/api" }
+  ]
+}
