@@ -12,6 +12,7 @@ export default async function handler(req: IncomingMessage, res: ServerResponse)
         const html = getHtml(parsedReq);
         if (isHtmlDebug) {
             res.setHeader('Content-Type', 'text/html');
+            res.setHeader('Cache-Control', `public, immutable, no-transform, s-maxage=31536000, max-age=31536000`);
             res.end(html);
             return;
         }
